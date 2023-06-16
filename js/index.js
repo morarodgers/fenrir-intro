@@ -45,6 +45,8 @@ messageForm.addEventListener('submit', function(event) {
 
     // Creating a new list item for users messages
     const messageSection = document.querySelector('#messages');
+
+    messageSection.style.display = "block";
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href='mailto:${usersEmail}'>${usersName}</a> <span>${message}</span>`;
@@ -56,7 +58,7 @@ messageForm.addEventListener('submit', function(event) {
         const entry = removeButton.parentNode;
         entry.remove();
 
-        // Check if there is a list of messages
+        // Hide message section when messages are deleted
         if (messageList.children.length === 0) {
           messageSection.style.display = 'none';
         } else {
@@ -68,12 +70,6 @@ messageForm.addEventListener('submit', function(event) {
 newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 });
-/*
-$("li").each(function (x) {
-  if ($(x).html() === "") {
-    $(x).closest(li).hide();
-  }
-});*/
 
 /*
 const messageSection = document.querySelector('#messages');
