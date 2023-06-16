@@ -45,12 +45,16 @@ messageForm.addEventListener('submit', function(event) {
 
     // Creating a new list item for users messages
     const messageSection = document.querySelector('#messages');
-
+    
+    // Display the message section
     messageSection.style.display = "block";
+
+    // Add the list items
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href='mailto:${usersEmail}'>${usersName}</a> <span>${message}</span>`;
 
+    // Create the remove button
     const removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
@@ -64,10 +68,16 @@ messageForm.addEventListener('submit', function(event) {
         } else {
           messageSection.style.display = 'block';
         }
-   
     });
+    // Create edit button
+    const editButton = document.createElement('button');
+    editButton.innerText = 'edit';
+    editButton.type = 'button';
+    /*editButton.addEventListener('click', function() {
+    });*/
 
 newMessage.appendChild(removeButton);
+newMessage.appendChild(editButton);
 messageList.appendChild(newMessage);
 });
 
