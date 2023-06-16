@@ -71,13 +71,3 @@ newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 });
 
-/*
-const messageSection = document.querySelector('#messages');
-const messageList = document.querySelector('#messageList');
-
-// Check if there is a list of messages
-if (messageList.children.length === 0) {
-  messageSection.style.display = 'none';
-} else {
-  messageSection.style.display = 'block';
-}*/
