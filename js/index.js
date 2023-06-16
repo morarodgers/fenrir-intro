@@ -55,22 +55,27 @@ messageForm.addEventListener('submit', function(event) {
     removeButton.addEventListener('click', function() {
         const entry = removeButton.parentNode;
         entry.remove();
+
+        // Check if there is a list of messages
+        if (messageList.children.length === 0) {
+          messageSection.style.display = 'none';
+        } else {
+          messageSection.style.display = 'block';
+        }
    
     });
 
 newMessage.appendChild(removeButton);
 messageList.appendChild(newMessage);
 });
+/*
+$("li").each(function (x) {
+  if ($(x).html() === "") {
+    $(x).closest(li).hide();
+  }
+});*/
 
-/* window.onload = (event) => {
-    let node = document.getElementById('#messages');
-    let element = node.querySelector('ul');
-    if (element !== null) {
-    node.remove();
-}
-
-};
-
+/*
 const messageSection = document.querySelector('#messages');
 const messageList = document.querySelector('#messageList');
 
