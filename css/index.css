@@ -4,3 +4,6 @@ body{
 #messages {
     display: none;
 }
+.edit-input {
+    display: none;
+  }
