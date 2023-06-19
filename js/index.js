@@ -7,7 +7,6 @@ const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
 copyright.textContent = 'Rodgers Mora Onchanah \u00A9' + thisYear;
-copyright.style.color = 'purple';
 
 footer.appendChild(copyright);
 
@@ -17,7 +16,6 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "A little bit of C++"];
 const skillsSection = document.querySelector('#skills');
 const skillslist = skillsSection.querySelector('ul');
 skillslist.classList.add("skills");
-//skillslist.style.background = '#e0be55';
 
 // Populate the unordered list with the array elements
 for (let i = 0; i < skills.length; i ++){
@@ -49,7 +47,7 @@ messageForm.addEventListener('submit', function(event) {
     // Add the list items
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.classList = 'messages';
+    newMessage.classList.add("messages");
     newMessage.innerHTML = `<a href='mailto:${userEmail}'>${userName}</a><span>${message}</span>`;
 
     // Create the remove button
