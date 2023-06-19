@@ -48,18 +48,8 @@ messageForm.addEventListener('submit', function(event) {
     // Add the list items
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.innerHTML = `<a href='mailto:${userEmail}'>${userName}</a> <span>${message}</span>`;
-    
-    // Create a a container for the input
-    const messageText = document.createElement('span');
-    messageText.classList.add('messageTxt');
-    messageText.textContent = message;
-
-    // Create input for editing messages
-    const editInput = document.createElement('input');
-    editInput.classList.add('edit-input');
-    editInput.type = 'text';
-    
+    newMessage.classList = 'messages';
+    newMessage.innerHTML = `<a href='mailto:${userEmail}'>${userName}</a><span>${message}</span>`;
 
     // Create the remove button
     const removeButton = document.createElement('button');
@@ -77,40 +67,37 @@ messageForm.addEventListener('submit', function(event) {
         }
     });
 
-    // Create edit button and a Function to run when it is clicked
+    // Create edit & save buttons 
     const editButton = document.createElement('button');
     editButton.innerText = 'edit';
     editButton.type = 'button';
-    editButton.addEventListener('click', function () {
-      const entry = event.target.parentNode;
-      const messageText = entry.querySelector('.messageTxt');
-      const editInput = entry.querySelector('.edit-input');
-    
-      messageText.style.display = 'none';
-      editInput.value = message.textContent;
-      editInput.style.display = 'inline-block';
-      editInput.focus();
-    });
 
-    // Create save button and a Function to run when the button is clicked
-    const saveButton = document.createElement('button');
-    saveButton.innerText = 'save';
-    saveButton.type = 'button';
-    saveButton.addEventListener('click', function () {
-      const entry = event.target.parentNode;
-      const messageText = entry.querySelector('.messageTxt');
-      const editInput = entry.querySelector('.edit-input');
-      const editedMessage = editInput.value;
-    
-      messageText.textContent = editedMessage;
-      messageText.style.display = 'inline-block';
-      editInput.style.display = 'none';
+    // Functions to edit and save content when the buttons are clicked
+    editButton.addEventListener('click', function (event) {
+      const button = event.target;
+      const li = editButton.parentNode;
+      const ul = li.parentNode;
+      if(button.innerText === 'edit') {
+        const span = li.childNodes[1];
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.value = span.textContent;
+        li.insertBefore(input, span);
+        li.removeChild(span);
+        editButton.innerText = 'save'
+      } else if(button.innerText === 'save') {
+        const input = li.childNodes[1];
+        const span = document.createElement('span');
+        span.textContent = input.value;
+        li.insertBefore(span, input);
+        li.removeChild(input);
+        editButton.textContent = 'edit';
+      }
+      
     });
-    
 
 newMessage.appendChild(removeButton);
 newMessage.appendChild(editButton);
-newMessage.appendChild(saveButton);
 messageList.appendChild(newMessage);
 });
 
