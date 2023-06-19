@@ -26,14 +26,7 @@ li {
 section {
     padding: 5px;
 }
-.skills, .messages {
+.skills {
     list-style: square;
-    background-color: rgb(102, 241, 236);
-}
-footer{
-    background-color: rgb(164, 233, 52);
-    color: brown;
-    text-align: center;
-    font-size: 80%;
-    padding: auto;
+    background-color: yellow;
 }
