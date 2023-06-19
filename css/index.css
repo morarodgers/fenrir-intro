@@ -1,5 +1,9 @@
 body{
     background-color: rgb(130, 238, 238);
+    font-family: arial;
+}
+h1,h2, h3{
+    font-family: cooper;
 }
 #messages {
     display: none;
@@ -18,4 +22,11 @@ a {
 }
 li {
     padding: 5px;
+}
+section {
+    padding: 5px;
+}
+.skills {
+    list-style: square;
+    background-color: yellow;
 }

@@ -7,7 +7,7 @@ const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
 copyright.textContent = 'Rodgers Mora Onchanah \u00A9' + thisYear;
-copyright.style.color = 'turquoise';
+copyright.style.color = 'purple';
 
 footer.appendChild(copyright);
 
@@ -16,7 +16,8 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "A little bit of C++"];
 
 const skillsSection = document.querySelector('#skills');
 const skillslist = skillsSection.querySelector('ul');
-skillslist.style.background = '#e0be55';
+skillslist.classList.add("skills");
+//skillslist.style.background = '#e0be55';
 
 // Populate the unordered list with the array elements
 for (let i = 0; i < skills.length; i ++){
