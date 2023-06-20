@@ -1,9 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&effect=neon|fire|emboss');
 body{
     background-color: rgb(130, 238, 238);
+    font-family: arial;
 }
+
+h1,h2, h3{
+    font-family: cooper;
+    color: rgb(205, 116, 6);
+}
+
 #messages {
-    display: none;
+    display: none;  
 }
+
 .edit-input {
     display: none;
+  }
+
+button {
+    margin-right: 10px;
+}
+
+span {
+    margin-right: 10px;
+}
+
+a {
+    margin-right: 10px;
+}
+
+li {
+    padding: 5px;
+}
+
+section {
+    padding: 5px;
+}
+
+.skills {
+    list-style: square;
+    font-weight: bold;
+    animation: changeBackgroundColor 10s infinite;
+    font-family: Lato;
+    /*background-image: linear-gradient(rgb(77, 236, 241), yellow, rgb(106, 239, 244));*/
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+      background-color: rgb(77, 236, 241);
+    }
+    50% {
+      background-color: rgb(227, 227, 41);
+    }
+    100% {
+      background-color: rgb(106, 239, 244);
+    }
+  }
+
+
+footer {
+    text-align: center;
+    font-size: 80%;
+    font-family: Lato;
+    color: rgb(244, 225, 164);
+    background-color: rgba(69, 160, 239, 0.475);
+    padding: 1%;
+}
+
+label {
+    font-size: 120%;
+    color: rgba(224, 161, 45, 0.77);
+    font-weight: 700;
+}
+
+textarea {
+    width: 30%;
+    height: 100px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #4268e4;
+    border-radius: 4px;
+    background-color: rgb(236, 236, 164);
+    font-size: 18px;
+  }
+
+  input {
+    width: 20%;
+    height: 30px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border: 2px solid #6787e4;
+    border-radius: 4px;
+    background-color: rgb(236, 236, 164);
+    font-size: 14px;
+  }
+
+button {
+    background-color: rgb(205, 116, 6);
+    border: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.messages {
+    list-style: square;  
+}
+
+img {
+    border-radius: 50%;
+    width:20%;
+    height:20%;
+    margin-left: auto;
+    margin-right: auto;
   }
