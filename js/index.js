@@ -7,7 +7,6 @@ const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
 copyright.textContent = 'Rodgers Mora Onchanah \u00A9' + thisYear;
-copyright.style.color = 'purple';
 
 footer.appendChild(copyright);
 
