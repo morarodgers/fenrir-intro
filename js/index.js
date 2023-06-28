@@ -6,12 +6,12 @@ const thisYear = today.getFullYear();
 const footer = document.querySelector('footer');
 
 const copyright = document.createElement('p');
-copyright.textContent = 'Rodgers Mora Onchanah \u00A9' + thisYear;
+copyright.textContent = '\u00A9Rodgers Mora Onchanah ' + thisYear;
 
 footer.appendChild(copyright);
 
 // Array with skills
-const skills = ["HTML", "CSS", "JavaScript", "Python", "A little bit of C++"];
+const skills = ["HTML", "CSS", "JavaScript", "Python", "C++"];
 
 const skillsSection = document.querySelector('#skills');
 const skillslist = skillsSection.querySelector('ul');
