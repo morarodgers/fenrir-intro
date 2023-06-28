@@ -10,47 +10,80 @@
         <link rel="stylesheet" href="css/index.css" >
     </head>
     <body>
-        <img src="images/portfolio.jpg">
-        <section>
-            <h1>About</h1>
-            <p>Hi, I'm Rodgers.</p>
-            <p>A passionate front-end developer. I am currently perfecting my skills on web development.</p>
-            <p>Can't wait to be called a full stack developer!</p>
-        </section>
-        <section>
-            <h1>Experience</h1>
-            <p>I have worked with JavaScript and I teach Python coding in a school.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul></ul>
-        </section>
-        <section>
-            <h1>Connect with me</h1>
-            <ul style="list-style-type: none;">
-                <li><a href="mailto:morarodgers@gmail.com">Email</a></li>
-                <li><a href="https://github.com/morarodgers" target="_blank">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/morarodgers/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.facebook.com/ronchanah" target="_blank">Facebook</a></li>
-                <li><a href="https://instagram.com/rod.g_music" target="_blank">Instagram</a></li>
-            </ul>
-        </section>
-        <section>
-            <h2 class="font-effect-emboss">Leave a message</h2>
-            <form name="leave_message">
-                <label>Name </label><br>
-                <input type="text" name="usersName" id="username" required="true" placeholder="Type your name here"><br>
-                <label>Email </label><br>
-                <input type="email" name="usersEmail" id="useremail" required="true" placeholder="Type your email address here"><br>
-                <label>Message </label><br>
-                <textarea name="usersMessage" required="true" placeholder="Type your message"></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-        <section id="messages">
-            <h2 class="font-effect-fire">Messages</h2>
-            <ul></ul>
-        </section>
+        <header>
+            <div class='header'>
+                <div>
+                    <img src="images/portfolio.jpg">
+                    <span class="me">Rodgers Mora Onchanah</span>
+                </div>
+                <ul class='menu'>
+                    <li class="menu-item"><a href='#about'>About</a></li>
+                    <li class="menu-item"><a href='#experience'>Experience</a></li>
+                    <li class="menu-item"><a href='#skils'>Skills</a></li>
+                    <li class="menu-item"><a href='#connect'>Connect</a></li>
+                    <li class="menu-item"><a href='#contact'>Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="content">
+            <section>
+                <a id="about"><h1>About</h1></a>
+                <p>A passionate front-end developer. I am currently perfecting my skills on web development.</p>
+                <p>Can't wait to be called a full stack developer!</p>
+            </section>
+            <section>
+                <a id="experience"><h1>Experience</h1></a>
+                <ul class="experience">
+                    <li>Computer science teacher - Premier Academy</li>
+                    <li>Coding teacher - Premier Academy</li>
+                </ul>
+            </section>
+            <section id="skills">
+                <a id="skils"><h2>Skills</h2></a>
+                <ul></ul>
+            </section>
+            <section>
+                <a id="connect"><h1>Connect with me</h1></a>
+                <ul style="list-style-type: none;">
+                    <li><a href="mailto:morarodgers@gmail.com">Email</a></li>
+                    <li><a href="https://github.com/morarodgers" target="_blank">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/morarodgers/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/ronchanah" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com/rod.g_music" target="_blank">Instagram</a></li>
+                </ul>
+            </section>
+            <section>
+                <a id="contact"><h2 class="font-effect-emboss">Leave a message</h2></a>
+                <form name="leave_message">
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="item">
+                                <label class="field-label">Name </label>
+                                <input class="field-input" type="text" name="usersName" id="username" required="true" placeholder="Type your name here">
+                            </div>
+                            <div class="item">
+                                <label class="field-label">Email </label>
+                                <input class="field-input" type="email" name="usersEmail" id="useremail" required="true" placeholder="Type your email address here">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="item">
+                                <label class="field-label">Message </label>
+                                <textarea class="field-input" name="usersMessage" required="true" placeholder="Type your message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="button" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section id="messages">
+                <h2 class="font-effect-fire">Messages</h2>
+                <ul></ul>
+            </section>
+
+        </div>
         <footer class="font-effect-neon"></footer>
         <script src="js/index.js"></script>
     </body>

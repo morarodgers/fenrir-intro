@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&effect=neon|fire|emboss');
 @import url('https://fonts.googleapis.com/css2?family=Raleway');
 @import url('https://fonts.googleapis.com/css2?family=Belanosima');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
-  background-color: rgb(130, 238, 238);
+  background-color: #DBC1AD;
   font-family: 'Belanosima', sans-serif;
   font-size:large;
-  color: rgb(125, 8, 208);
+  color: #8E7C68;
+  height: 100%;
 }
 
 h1,h2, h3{
   font-family: cooper;
   color: rgb(205, 116, 6);
+  margin-top: 30px;
 }
 
 #messages {
@@ -37,23 +45,9 @@ section {
 .skills {
   list-style: square;
   font-weight: bold;
-  animation: changeBackgroundColor 10s infinite;
   font-family: Lato;
   /*background-image: linear-gradient(rgb(77, 236, 241), yellow, rgb(106, 239, 244));*/
 }
-
-@keyframes changeBackgroundColor {
-  0% {
-    background-color: rgb(77, 236, 241);
-  }
-  50% {
-    background-color: rgb(227, 227, 41);
-  }
-  100% {
-    background-color: rgb(106, 239, 244);
-  }
-}
-
 
 footer {
   text-align: center;
@@ -71,24 +65,22 @@ label {
 }
 
 textarea {
-  width: 30%;
   height: 100px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border: 2px solid #4268e4;
+  border: 2px solid #25211b;
   border-radius: 4px;
-  background-color: rgb(236, 236, 164);
+  background-color: #ece4de;
   font-size: 18px;
 }
 
 input {
-  width: 20%;
   height: 30px;
   padding: 8px 12px;
   box-sizing: border-box;
-  border: 2px solid #6787e4;
+  border: 2px solid #15130e;
   border-radius: 4px;
-  background-color: rgb(236, 236, 164);
+  background-color: #ece4de;
   font-size: 14px;
 }
 
@@ -102,19 +94,23 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+  color:rgb(237, 205, 205);
+  background-color: rgb(146, 228, 243);
+}
+
 .messages {
   list-style: square;  
 }
 
 img {
-  --s: 300px;
-  --b: 8px;
-  --g: 14px;
-  --c: #4ECDC4;
-  
+  --s: 100px;
+  --b: 4px;
+  --g: 7px;
+  --c: #F3E8EB;
   border-radius: 50%;
   width: var(--s);
-  aspect-ratio: 1;
+  
   outline: calc(var(--s)/2) solid #0009;
   outline-offset: calc(var(--s)/-2);
   cursor: pointer;
@@ -125,3 +121,140 @@ img:hover {
   outline-offset: var(--g);
 }
 
+a:link,
+a:visited {
+  color: #5D6063;
+  text-decoration: none;
+}
+
+/* Animation for the header background*/
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #DBC1AD;
+  }
+  50% {
+    background-color: #C09247;
+  }
+  100% {
+    background-color: #D1AFD3;
+  }
+  100% {
+    background-color: #E6E7E8;
+  }
+}
+
+.header {
+  /*position: fixed;*/
+  position: sticky;
+  top: 0%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  animation: changeBackgroundColor 10s infinite;
+}
+/*body header {
+  position: sticky;
+  top: 0%;
+}*/
+
+/*Make list items inline boxes*/
+.menu {
+  margin-top: 25px;
+}
+
+.menu > li {
+  display: inline;
+  margin-right: 5px;
+}
+
+.menu > li:last-of-type {
+  margin-right: 0;
+}
+.skills > li {
+  display: inline;
+  margin-right: 5px;
+  border: 2px solid #F3E8EB;
+  padding: 0.35rem 0.75rem;
+}
+.me {
+  font-family: 'Caprasimo', cursive;
+  font-size: 2em;
+  padding: 20px;
+}
+
+.content {
+  margin: 30px;
+}
+
+.experience {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #F3E8EB;
+  padding: 10px;
+}
+
+.experience > li {
+  background-color: #DBC1AD;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.experience > :last-child {
+  margin-bottom: 0;
+}
+
+form {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.form-body {
+  flex: 1;
+  max-width: 600px;
+  border-radius: 10px;
+  background-color: #F2EBE0;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px 10px;
+}
+
+.row {
+  display:flex; 
+}
+
+.item {
+  flex:1;  
+  display:flex;
+  flex-direction:column; 
+  margin:10px 5px;
+}
+@media only screen and (max-width: 500px) {
+  .row{
+    flex-direction:column; 
+  }
+  .button {
+    flex:1;
+}
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+  header {
+    text-align: center;
+    padding: 24px
+  }
+  form {
+    width: auto;
+  }
+  ul {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 0;
+  }
+}
