@@ -101,3 +101,37 @@ newMessage.appendChild(editButton);
 messageList.appendChild(newMessage);
 });
 
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/morarodgers/repos", true);
+githubRequest.send();
+githubRequest.addEventListener('load', function(event) {
+  const repositories = JSON.parse(this.response);
+  console.log(repositories);
+  
+  const projectSection = document.getElementById('projects');
+  const projectList = projectSection.querySelector('ul');
+
+  for (let i = 0; i < repositories.length; i++) {
+    const project = document.createElement('li');
+    const repositoryLink = document.createElement('a');
+    repositoryLink.href = repositories[i].html_url;
+    repositoryLink.textContent = repositories[i].name;
+    project.appendChild(repositoryLink);
+
+    const repositoryDescription = document.createElement('p');
+    repositoryDescription.textContent = repositories[i].description;
+    project.appendChild(repositoryDescription);
+
+    const repositoryDate = document.createElement('p');
+    const createdOn = new Date(repositories[i].created_at);
+    const formattedDate = createdOn.toLocaleDateString(undefined, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+    repositoryDate.textContent = 'Created on: ' + formattedDate;
+    project.appendChild(repositoryDate);
+
+    projectList.appendChild(project);
+  }
+});
