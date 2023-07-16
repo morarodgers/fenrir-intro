@@ -179,8 +179,9 @@ html {
 }
 .me {
   font-family: 'Caprasimo', cursive;
-  font-size: 2em;
+  font-size: 2vw;
   padding: 20px;
+  display: inline;
 }
 
 .content {
