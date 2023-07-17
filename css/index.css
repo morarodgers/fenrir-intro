@@ -183,7 +183,8 @@ html{
 }
 
 .content {
-  margin: 30px;
+  margin: auto;
+  width: 90vw;
 }
 
 .experience {
