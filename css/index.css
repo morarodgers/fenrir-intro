@@ -144,7 +144,7 @@ a:visited {
 }
 
 header {
-  /*position: fixed;*/
+  height: 7rem;
   position: sticky;
   top: 0%;
   display: flex;
@@ -153,11 +153,10 @@ header {
   padding: 10px;
   animation: changeBackgroundColor 10s infinite;
 }
-/*body header {
-  position: sticky;
-  top: 0%;
-}*/
 
+html{
+  scroll-padding-top: 8rem;
+}
 /*Make list items inline boxes*/
 .menu {
   margin-top: 25px;
@@ -179,12 +178,13 @@ header {
 }
 .me {
   font-family: 'Caprasimo', cursive;
-  font-size: 2em;
+  font-size: 2vw;
   padding: 20px;
 }
 
 .content {
-  margin: 30px;
+  margin: auto;
+  width: 90vw;
 }
 
 .experience {

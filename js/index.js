@@ -101,3 +101,88 @@ newMessage.appendChild(editButton);
 messageList.appendChild(newMessage);
 });
 
+// Fetch API
+const url = 'https://api.github.com/users/morarodgers/repos';
+fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network failure');
+    }
+    return response.json();
+  })
+  
+  //Display the projects on the page
+  .then(repositories => {
+    console.log(repositories);
+    
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      const repositoryLink = document.createElement('a');
+      repositoryLink.href = repositories[i].html_url;
+      repositoryLink.target = "_blank";
+      repositoryLink.textContent = repositories[i].name;
+      project.appendChild(repositoryLink);
+
+      const repositoryDescription = document.createElement('p');
+      repositoryDescription.textContent = repositories[i].description;
+      project.appendChild(repositoryDescription);
+
+      const repositoryDate = document.createElement('p');
+      const createdOn = new Date(repositories[i].created_at);
+      const formattedDate = createdOn.toLocaleDateString(undefined, {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+      });
+      repositoryDate.textContent = 'Created on: ' + formattedDate;
+      project.appendChild(repositoryDate);
+
+      projectList.appendChild(project);
+    }
+  })
+
+  // Handle errors from the server
+  .catch(err => {
+    console.log("Error;", err);
+    const errMessage = document.createElement('p');
+    errMessage.textContent = "Oh no! Something doesn't seem right. Please try again.";
+    document.body.appendChild(errMessage);
+  });
+  /*
+  const githubRequest = new XMLHttpRequest();
+  githubRequest.open("GET", "https://api.github.com/users/morarodgers/repos", true);
+  githubRequest.send();
+  githubRequest.addEventListener('load', function(event) {
+    const repositories = JSON.parse(this.response);
+    console.log(repositories);
+    
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) {
+        const project = document.createElement('li');
+        const repositoryLink = document.createElement('a');
+        repositoryLink.href = repositories[i].html_url;
+        repositoryLink.textContent = repositories[i].name;
+        project.appendChild(repositoryLink);
+
+        const repositoryDescription = document.createElement('p');
+        repositoryDescription.textContent = repositories[i].description;
+        project.appendChild(repositoryDescription);
+
+        const repositoryDate = document.createElement('p');
+        const createdOn = new Date(repositories[i].created_at);
+        const formattedDate = createdOn.toLocaleDateString(undefined, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+        repositoryDate.textContent = 'Created on: ' + formattedDate;
+        project.appendChild(repositoryDate);
+
+        projectList.appendChild(project);
+    }
+});*/
