@@ -30,7 +30,7 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 messageForm.addEventListener('submit', function(event) {
     //prevent form from submitting/refreshing the page
     event.preventDefault();
-
+    
     // Get values from the controls
     const userName = event.target.usersName.value;
     const userEmail = event.target.usersEmail.value;
@@ -78,22 +78,22 @@ messageForm.addEventListener('submit', function(event) {
         const li = editButton.parentNode;
         const ul = li.parentNode;
       
-      if(button.innerText === 'edit') {
-          const span = li.childNodes[1];
-          const input = document.createElement('input');
-          input.type = 'text';
-          input.value = span.textContent;
-          li.insertBefore(input, span);
-          li.removeChild(span);
-          editButton.innerText = 'save'
-      } else if(button.innerText === 'save') {
-          const input = li.childNodes[1];
-          const span = document.createElement('span');
-          span.textContent = input.value;
-          li.insertBefore(span, input);
-          li.removeChild(input);
-          editButton.textContent = 'edit';
-      }
+        if (button.innerText === 'edit') {
+            const span = li.childNodes[1];
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.value = span.textContent;
+            li.insertBefore(input, span);
+            li.removeChild(span);
+            editButton.innerText = 'save'
+        } else if (button.innerText === 'save') {
+            const input = li.childNodes[1];
+            const span = document.createElement('span');
+            span.textContent = input.value;
+            li.insertBefore(span, input);
+            li.removeChild(input);
+            editButton.textContent = 'edit';
+        }
       
     });
 
