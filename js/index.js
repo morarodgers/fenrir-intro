@@ -97,9 +97,9 @@ messageForm.addEventListener('submit', function(event) {
       
     });
 
-newMessage.appendChild(removeButton);
-newMessage.appendChild(editButton);
-messageList.appendChild(newMessage);
+    newMessage.appendChild(removeButton);
+    newMessage.appendChild(editButton);
+    messageList.appendChild(newMessage);
 });
 
 // Fetch API
