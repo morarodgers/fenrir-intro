@@ -48,7 +48,7 @@ messageForm.addEventListener('submit', function(event) {
     // Add the list items
     const messageList = messageSection.querySelector('ul');
     const newMessage = document.createElement('li');
-    newMessage.classList = 'messages';
+   // newMessage.classList = 'messages';
     newMessage.innerHTML = `<a href='mailto:${userEmail}'>${userName}</a><span>${message}</span>`;
 
     // Create the remove button
@@ -97,9 +97,9 @@ messageForm.addEventListener('submit', function(event) {
       
     });
 
-newMessage.appendChild(removeButton);
-newMessage.appendChild(editButton);
-messageList.appendChild(newMessage);
+    newMessage.appendChild(removeButton);
+    newMessage.appendChild(editButton);
+    messageList.appendChild(newMessage);
 });
 
 // Fetch API

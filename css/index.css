@@ -16,7 +16,7 @@ body {
   height: 100%;
 }
 
-h1,h2, h3 {
+h1, h2, h3 {
   font-family: cooper;
   color: rgb(205, 116, 6);
   margin-top: 30px;
@@ -40,13 +40,6 @@ li {
 
 section {
   padding: 5px;
-}
-
-.skills {
-  list-style: square;
-  font-weight: bold;
-  font-family: Lato;
-  /*background-image: linear-gradient(rgb(77, 236, 241), yellow, rgb(106, 239, 244));*/
 }
 
 footer {
@@ -100,7 +93,8 @@ button:hover {
 }
 
 .messages {
-  list-style: square;  
+  list-style: square;
+  display: flex;  
 }
 
 img {
@@ -177,11 +171,21 @@ html {
   margin-right: 0;
 }
 
+.skills {
+  display: flex;
+  list-style: none;
+  font-weight: bold;
+}
+
 .skills > li {
-  display: inline;
+  /*display: inline;*/
   margin-right: 5px;
   border: 2px solid #F3E8EB;
   padding: 0.35rem 0.75rem;
+}
+
+.connect {
+  list-style: none;
 }
 
 .me {
@@ -246,8 +250,7 @@ form {
 }
 
 .menu-item:hover {
-  font-size: 150%;
-  background-color: rgb(255, 187, 0);
+  background-color: rgb(243, 222, 167);
   border-radius: 10px;
 }
 
@@ -275,6 +278,54 @@ form {
   }
 
   .me {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    font-size: 20px;
+    top: 0;
+    left: 2em;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  header {
+    text-align: center;
+    padding: 24px
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  form label {
+    display: block;
+  }
+  
+  body {
+    flex-direction: column;
+    /*overflow-x: hidden; */
+    font-size: 16px;
+    line-height: 1.4; 
+  }
+
+  .menu {
+    float: right;
+    display: block;
+  }
+
+  .me {
+    position: absolute;
+    z-index: -1;
+    font-size: 20px;
+    top: 0;
+    left: 1.5em;
+    width: 100%;
+    margin: 0;
+    text-align: center;
   }
 }
