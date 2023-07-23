@@ -278,11 +278,18 @@ form {
   }
 
   .me {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    font-size: 20px;
+    top: 0;
+    left: 2em;
+    width: 100%;
+    margin: 0;
+    text-align: center;
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
 
   header {
     text-align: center;
@@ -290,7 +297,13 @@ form {
   }
 
   form {
-    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  form label {
+    display: block;
   }
   
   body {
@@ -306,6 +319,13 @@ form {
   }
 
   .me {
-    display: none;
+    position: absolute;
+    z-index: -1;
+    font-size: 20px;
+    top: 0;
+    left: 1.5em;
+    width: 100%;
+    margin: 0;
+    text-align: center;
   }
 }
