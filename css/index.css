@@ -49,9 +49,12 @@ footer {
   font-size: 80%;
   font-family: Lato;
   color: rgb(244, 225, 164);
-  background-color: rgba(69, 160, 239, 0.475);
+  background-color: rgba(182, 125, 9, 0.475);
   padding: 1%;
   width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }
 
 label {
@@ -98,6 +101,7 @@ button:hover {
 .messages {
   list-style: square;
   display: flex;  
+  margin-bottom: 3em;
 }
 
 img {
@@ -235,6 +239,7 @@ form {
   margin-top: auto;
   margin-bottom: auto;
   padding: 5px 10px;
+  margin-bottom: 3em;
 }
 
 .row {
