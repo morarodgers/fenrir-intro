@@ -12,17 +12,11 @@ body {
   background-color: #DBC1AD;
   font-family: 'Belanosima', sans-serif;
   font-size: large;
-  display: flex; flex-direction: column;/*new*/
+ /* display: flex;
+  flex-direction: column;new*/
   color: #5d4d3c;
   height: 100%;
 }
-
-/*.main {
-  background-color: #DBC1AD;
-  width: 80%;
-  max-width: 75ch;
-  margin: 0 auto;
-}*/
 
 h1, h2, h3 {
   font-family: cooper;
@@ -201,7 +195,7 @@ html {
 .me {
   font-family: 'Caprasimo', cursive;
   font-size: 2vw;
-  padding: 20px;
+  outline: 1px solid red;
 }
 
 .content {
@@ -266,6 +260,10 @@ form {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+  .me, .menu {
+    outline: 1px solid red;
+  }
+
   header {
     text-align: center;
     padding: 24px
@@ -305,11 +303,8 @@ form {
 
   .me {
     position: absolute;
-    z-index: -1;
-    font-size: 20px;
-    top: 0;
-    left: 2em;
-    width: 100%;
+    top: 10%;
+    width: 80%;
     margin: 0;
     text-align: center;
   }
@@ -360,11 +355,8 @@ form {
 
   .me {
     position: absolute;
-    z-index: -1;
-    font-size: 20px;
-    top: 0;
-    left: 1.5em;
-    width: 100%;
+    top: 10%;
+    width: 80%;
     margin: 0;
     text-align: center;
   }
