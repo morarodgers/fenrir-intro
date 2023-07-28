@@ -271,8 +271,20 @@ form {
     padding: 24px
   }
 
-  form {
-    width: auto;
+  .form-body {
+    width: 100%;
+    display: block;
+  }
+
+  .row {
+    display: block;
+  }
+
+  .field-label,
+  .field-input {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
   }
     
   body {
@@ -287,6 +299,10 @@ form {
     display: block;
   }
 
+  .skills > li {
+    display: block;
+  }
+
   .me {
     position: absolute;
     z-index: -1;
@@ -297,6 +313,10 @@ form {
     margin: 0;
     text-align: center;
   }
+
+  .projects {
+    list-style-type: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -306,14 +326,20 @@ form {
     padding: 24px
   }
 
-  form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+  .form-body {
+    width: 100%;
+    display: block;
   }
 
-  form label {
+  .row {
     display: block;
+  }
+  
+  .field-label,
+  .field-input {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 
   body {
@@ -328,6 +354,10 @@ form {
     display: block;
   }
 
+  .skills > li {
+    display: block;
+  }
+
   .me {
     position: absolute;
     z-index: -1;
@@ -337,5 +367,9 @@ form {
     width: 100%;
     margin: 0;
     text-align: center;
+  }
+
+  .projects {
+    list-style-type: none;
   }
 }
