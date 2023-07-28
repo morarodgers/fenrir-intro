@@ -194,8 +194,7 @@ html {
 
 .me {
   font-family: 'Caprasimo', cursive;
-  font-size: 2vw;
-  outline: 1px solid red;
+  font-size: 3vw;
 }
 
 .content {
@@ -260,10 +259,6 @@ form {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
-  .me, .menu {
-    outline: 1px solid red;
-  }
-
   header {
     text-align: center;
     padding: 24px
@@ -305,6 +300,7 @@ form {
     position: absolute;
     top: 10%;
     width: 80%;
+    left: 20%;
     margin: 0;
     text-align: center;
   }
@@ -357,6 +353,7 @@ form {
     position: absolute;
     top: 10%;
     width: 80%;
+    left: 20%;
     margin: 0;
     text-align: center;
   }
