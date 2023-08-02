@@ -257,6 +257,12 @@ form {
   font-size: 150%;
 }
 
+.connect ul{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
 .menu-item:hover {
   background-color: rgb(243, 222, 167);
   border-radius: 10px;
